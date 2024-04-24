@@ -44,6 +44,5 @@ void Window::addSelectedLayout(void)
 
 void Window::deleteSelectedLayout(void)
 {
-    qDebug() << m_view->currentIndex().row();
     m_model->deleteLayout(m_view->currentIndex().row());
 }

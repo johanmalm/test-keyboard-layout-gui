@@ -64,6 +64,9 @@ void LayoutModel::addLayout(QString code, QString desc)
 
 void LayoutModel::deleteLayout(int index)
 {
+    if (index < 0 || index >= m_layouts.size()) {
+        return;
+    }
     m_layouts.remove(index);
     update();
 }
